@@ -1,9 +1,9 @@
-import { Router,Request,Response } from "express";
-
+import { Router } from "express";
+import {CreateUserController}  from "./controllers/user/createUserController";
 const rotas = Router();
 
-rotas.get('/teste', (req:Request,res:Response)=>{
-     
-})
+
+
+rotas.post('/users', new CreateUserController().handle)
 
 export default rotas
